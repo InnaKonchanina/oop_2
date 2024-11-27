@@ -30,14 +30,14 @@
         {
             pMain = new Panel();
             panel1 = new Panel();
+            MoveDownButton = new Button();
+            MoveUpButton = new Button();
+            MoveRightButton = new Button();
+            MoveLeftButton = new Button();
             SizeDownButton = new Button();
             SizeUpButton = new Button();
             HideButton = new Button();
             ShowButton = new Button();
-            MoveLeftButton = new Button();
-            MoveRightButton = new Button();
-            MoveUpButton = new Button();
-            MoveDownButton = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -66,6 +66,46 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(328, 450);
             panel1.TabIndex = 1;
+            // 
+            // MoveDownButton
+            // 
+            MoveDownButton.Location = new Point(122, 323);
+            MoveDownButton.Name = "MoveDownButton";
+            MoveDownButton.Size = new Size(94, 29);
+            MoveDownButton.TabIndex = 8;
+            MoveDownButton.Text = "MoveDown";
+            MoveDownButton.UseVisualStyleBackColor = true;
+            MoveDownButton.Click += MoveDownButton_Click;
+            // 
+            // MoveUpButton
+            // 
+            MoveUpButton.Location = new Point(122, 253);
+            MoveUpButton.Name = "MoveUpButton";
+            MoveUpButton.Size = new Size(94, 29);
+            MoveUpButton.TabIndex = 7;
+            MoveUpButton.Text = "MoveUp";
+            MoveUpButton.UseVisualStyleBackColor = true;
+            MoveUpButton.Click += MoveUpButton_Click;
+            // 
+            // MoveRightButton
+            // 
+            MoveRightButton.Location = new Point(182, 288);
+            MoveRightButton.Name = "MoveRightButton";
+            MoveRightButton.Size = new Size(94, 29);
+            MoveRightButton.TabIndex = 6;
+            MoveRightButton.Text = "MoveRight";
+            MoveRightButton.UseVisualStyleBackColor = true;
+            MoveRightButton.Click += MoveRightButton_Click;
+            // 
+            // MoveLeftButton
+            // 
+            MoveLeftButton.Location = new Point(50, 288);
+            MoveLeftButton.Name = "MoveLeftButton";
+            MoveLeftButton.Size = new Size(94, 29);
+            MoveLeftButton.TabIndex = 5;
+            MoveLeftButton.Text = "MoveLeft";
+            MoveLeftButton.UseVisualStyleBackColor = true;
+            MoveLeftButton.Click += MoveLeftButton_Click;
             // 
             // SizeDownButton
             // 
@@ -107,46 +147,6 @@
             ShowButton.UseVisualStyleBackColor = true;
             ShowButton.Click += ShowButton_Click;
             // 
-            // MoveLeftButton
-            // 
-            MoveLeftButton.Location = new Point(50, 288);
-            MoveLeftButton.Name = "MoveLeftButton";
-            MoveLeftButton.Size = new Size(94, 29);
-            MoveLeftButton.TabIndex = 5;
-            MoveLeftButton.Text = "MoveLeft";
-            MoveLeftButton.UseVisualStyleBackColor = true;
-            MoveLeftButton.Click += MoveLeftButton_Click;
-            // 
-            // MoveRightButton
-            // 
-            MoveRightButton.Location = new Point(182, 288);
-            MoveRightButton.Name = "MoveRightButton";
-            MoveRightButton.Size = new Size(94, 29);
-            MoveRightButton.TabIndex = 6;
-            MoveRightButton.Text = "MoveRight";
-            MoveRightButton.UseVisualStyleBackColor = true;
-            MoveRightButton.Click += MoveRightButton_Click;
-            // 
-            // MoveUpButton
-            // 
-            MoveUpButton.Location = new Point(122, 253);
-            MoveUpButton.Name = "MoveUpButton";
-            MoveUpButton.Size = new Size(94, 29);
-            MoveUpButton.TabIndex = 7;
-            MoveUpButton.Text = "MoveUp";
-            MoveUpButton.UseVisualStyleBackColor = true;
-            MoveUpButton.Click += MoveUpButton_Click;
-            // 
-            // MoveDownButton
-            // 
-            MoveDownButton.Location = new Point(122, 323);
-            MoveDownButton.Name = "MoveDownButton";
-            MoveDownButton.Size = new Size(94, 29);
-            MoveDownButton.TabIndex = 8;
-            MoveDownButton.Text = "MoveDown";
-            MoveDownButton.UseVisualStyleBackColor = true;
-            MoveDownButton.Click += MoveDownButton_Click;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -155,7 +155,8 @@
             Controls.Add(panel1);
             Controls.Add(pMain);
             Name = "Form1";
-            Text = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Geometry Draw";
             panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
